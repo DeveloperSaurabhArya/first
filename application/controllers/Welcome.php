@@ -43,7 +43,7 @@ class Welcome extends CI_Controller {
 
 	}
 
-	public function list_student()
+	public function list_student() 
 	{
 		// $this->load->view('list_student');
 		$this->load->model('Student_model');
@@ -71,5 +71,9 @@ class Welcome extends CI_Controller {
 		// $this->list_student();
 	}
 
+	public function teacher()
+	{
+		$this->load->view('teacher');
+	}
 
 }
