@@ -71,9 +71,24 @@ class Welcome extends CI_Controller {
 		// $this->list_student();
 	}
 
-	public function teacher()
+	// public function teacher()
+	// {
+	// 	$this->load->view('teacher');
+	// }
+
+
+	function teacher()
 	{
-		$this->load->view('teacher');
+		// $this->load->view('add_student');
+
+		$this->load->model('Student_model');
+		if($this->input->post()){
+			$this->Student_model->insert_teacher(); 
+			redirect(current_url());
+		}
+		else
+			$this->load->view('teacher');
+
 	}
 
 }

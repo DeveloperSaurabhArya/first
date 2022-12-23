@@ -10,7 +10,6 @@ class Student_model extends CI_Model
 						'address' => $this->input->post('address')
 		);
 		$this->db->insert('student',$data);
-
 	}
 
 	public function fetch_data()
@@ -45,6 +44,17 @@ class Student_model extends CI_Model
 		$this->db->where('id',$id);
 		$this->db->delete('student');
 	}
+
+	public function insert_teacher()
+	{
+		$data = array('t_name' => $this->input->post('t_name'),
+						't_email' => $this->input->post('t_email'),
+						't_mobile' => $this->input->post('t_mobile'),
+						'qualification' => $this->input->post('qualification')
+		);
+		$this->db->insert('teacher',$data);
+	}
+
 }
 
 ?>
