@@ -384,7 +384,7 @@
           <ul class="treeview-menu">
             <li class="active"><a href="<?=base_url()?>Welcome/teacher"><i class="fa fa-user-plus"></i>Add Teacher</a></li>
 
-            <!-- <li class="active"><a href="<?=base_url()?>Welcome/list_student"><i class="fa fa-users"></i>List Student</a></li> -->
+            <li class="active"><a href="<?=base_url()?>Welcome/list_teacher"><i class="fa fa-users"></i>List Student</a></li>
           </ul>
         </li>
         

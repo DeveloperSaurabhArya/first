@@ -2,7 +2,7 @@
 
 class Student_model extends CI_Model
 {
-	public function insert_data()
+	public function insert_student()
 	{
 		$data = array('name' => $this->input->post('name'),
 						'email' => $this->input->post('email'),
@@ -18,6 +18,8 @@ class Student_model extends CI_Model
 		$s = $this->db->get('student');
 		return $s;
 	}
+
+	
 
 	public function edit_student($id)
 	{
@@ -53,6 +55,13 @@ class Student_model extends CI_Model
 						'qualification' => $this->input->post('qualification')
 		);
 		$this->db->insert('teacher',$data);
+	}
+
+	function fetch_teacher()
+	{
+		$this->db->select('*');
+		$sau = $this->db->get('teacher');
+		return $sau;
 	}
 
 }

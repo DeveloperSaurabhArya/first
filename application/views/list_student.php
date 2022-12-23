@@ -30,8 +30,7 @@ include 'include/header.php';
 					<td><?php echo $row->email ?></td>
 					<td><?php echo $row->mobile ?></td>
 					<td><?php echo $row->address ?></td>
-					<td><a href="<?php echo site_url('Welcome/edit_student/').$row->id; ?>"><i class="fa fa-edit"></i></a></td>
-					<td><a href="<?php echo site_url('Welcome/delete/').$row->id?>"><i class="fa fa-trash"></i></a></td>
+					
 				</tr>
 			<?php
 			}
@@ -45,4 +44,4 @@ include 'include/header.php';
 include 'include/footer.php';
 ?>
 
-<td><a href="javascript:Delete('.$row->id.',\'add_student\', \'add_student\')" class="btn btn-danger btn-xs btn-sm"><i class="fa fa-trash"></i></a></td>
+<!-- <td><a href="javascript:Delete('.$row->id.',\'add_student\', \'add_student\')" class="btn btn-danger btn-xs btn-sm"><i class="fa fa-trash"></i></a></td> -->

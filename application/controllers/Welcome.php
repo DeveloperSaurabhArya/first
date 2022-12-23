@@ -3,21 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	
 	public function login()
 	{
@@ -35,7 +20,7 @@ class Welcome extends CI_Controller {
 
 		$this->load->model('Student_model');
 		if($this->input->post()){
-			$this->Student_model->insert_data();
+			$this->Student_model->insert_student();
 			redirect(current_url());
 		}
 		else
@@ -71,12 +56,6 @@ class Welcome extends CI_Controller {
 		// $this->list_student();
 	}
 
-	// public function teacher()
-	// {
-	// 	$this->load->view('teacher');
-	// }
-
-
 	function teacher()
 	{
 		// $this->load->view('add_student');
@@ -90,5 +69,33 @@ class Welcome extends CI_Controller {
 			$this->load->view('teacher');
 
 	}
+
+	function list_teacher()
+		{
+			$this->load->model('Student_model');
+			$data['fetch'] = $this->Student_model->fetch_teacher();
+			$this->load->view('list_teacher',$data);
+
+		}
+	
+
+		public function ajax()
+			{
+				$return = array();
+				if($post = $this->input->post() )
+				{
+					switch ($post['status'])
+					{
+						
+								case 'delete_teacher':
+									$this->db->where('id',$post["id"])->delete("teacher");
+									$return['status'] = '<div class="alert alert-danger"><h4>Delete Employee Successfully..</h4></div>';
+									redirect(current_url());
+								break;
+
+					}
+					echo json_encode($return); 
+				}
+			}
 
 }
