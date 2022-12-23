@@ -40,7 +40,7 @@
       <label>Admin Lte</label>
     </div>
     <div class="panel-body">
-
+              <!--show message status-->
                 <?
                   if($msg = $this->session->flashdata('msg'));
                       echo $msg;
