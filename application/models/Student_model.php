@@ -64,6 +64,15 @@ class Student_model extends CI_Model
 		return $sau;
 	}
 
+	function insert_demo()
+	{
+		$data = array('name' => $this->input->post('name'),
+						'phone' => $this->input->post('phone')
+
+		);
+		$this->db->insert('demo',$data);
+	}
+
 }
 
 ?>

@@ -56,7 +56,7 @@ class Welcome extends CI_Controller {
 		// $this->list_student();
 	}
 
-	function teacher()
+	function teacher() 
 	{
 		// $this->load->view('add_student');
 
@@ -71,31 +71,30 @@ class Welcome extends CI_Controller {
 	}
 
 	function list_teacher()
-		{
+	{
 			$this->load->model('Student_model');
 			$data['fetch'] = $this->Student_model->fetch_teacher();
 			$this->load->view('list_teacher',$data);
 
+	}
+
+	public function demo()
+	{
+		// $this->load->view(__FUNCTION__);
+		$this->load->model('Student_model');
+		if($this->input->post()){
+			$this->Student_model->insert_demo();
+			redirect(current_url());
 		}
+		else
+			$this->load->view(__FUNCTION__);
+	}
 	
+	function show_demo()
+	{
+		$this->load->view(__FUNCTION__);
+	}
 
-		public function ajax()
-			{
-				$return = array();
-				if($post = $this->input->post() )
-				{
-					switch ($post['status'])
-					{
-						
-								case 'delete_teacher':
-									$this->db->where('id',$post["id"])->delete("teacher");
-									$return['status'] = '<div class="alert alert-danger"><h4>Delete Employee Successfully..</h4></div>';
-									redirect(current_url());
-								break;
-
-					}
-					echo json_encode($return); 
-				}
-			}
+	
 
 }
