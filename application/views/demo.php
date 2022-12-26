@@ -2,12 +2,7 @@
 include 'include/header.php';
 ?>
 
-
-
-
-
-	
-    
+ 
     <style type="text/css">
         	.myform
         	{

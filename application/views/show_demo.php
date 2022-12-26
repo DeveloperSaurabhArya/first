@@ -19,8 +19,7 @@ include 'include/header.php';
     			<div class="col-lg-3"></div>
     			<div class="col-lg-6" style="margin: 10px"> 
                         <div class="myform" style="border-top:10px solid green">
-                        	<img style="width:10%" src="https://i.pinimg.com/564x/59/32/29/593229739184504afd9507cc42a9cb86.jpg">
-                            <h3 style="font-family: sans-serif; padding-left:20px;padding-bottom: 5px;">Authenticated by the Bizknow India Pvt. Ltd.</h3>
+                            <h3 style="font-family: sans-serif; padding-left:15px;padding-bottom: 5px;"><img style="width:10%" src="https://i.pinimg.com/564x/59/32/29/593229739184504afd9507cc42a9cb86.jpg">Authenticated by the Bizknow India Pvt. Ltd.</h3>
                         </div>	  	
     			</div>
     			<div class="col-lg-3"></div>
