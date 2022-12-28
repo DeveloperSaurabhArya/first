@@ -97,5 +97,9 @@ class Welcome extends CI_Controller {
 		$this->load->view(__FUNCTION__);
 	}
 
+	function pass()
+	{
+		$this->load->view(__FUNCTION__);
+	}
 
 }
