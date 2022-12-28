@@ -388,7 +388,7 @@
 
             <li class="active"><a href="<?=base_url()?>Welcome/demo"><i class="fa fa-user"></i>Demo</a></li>
 
-            <li class="active"><a href="<?=base_url()?>Welcome/show_demo"><i class="fa fa-book"></i>View Page</a></li>
+            <li class="active"><a href="<?=base_url()?>Welcome/password_create"><i class="fa fa-book"></i>View Page</a></li>
 
           </ul>
         </li>

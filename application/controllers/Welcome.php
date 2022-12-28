@@ -17,7 +17,9 @@ class Welcome extends CI_Controller {
 	function add_student()
 	{
 		// $this->load->view('add_student');
-
+		 // random_password(12);
+// 		check_number(3);
+// exit;
 		$this->load->model('Student_model');
 		if($this->input->post()){
 			$this->Student_model->insert_student();
@@ -95,6 +97,5 @@ class Welcome extends CI_Controller {
 		$this->load->view(__FUNCTION__);
 	}
 
-	
 
 }

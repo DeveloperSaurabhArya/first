@@ -28,17 +28,17 @@ class Login extends CI_Controller
 				);
 				
 				$this->session->set_userdata($sau);
-				redirect(site_url('Welcome'));
+				redirect(site_url('Welcome/index'));
 			}
 			else
 			{
 				$this->session->set_flashdata('msg','<div class="alert alert-danger">Invalid Login</div>');
-				redirect(site_url('welcome/login'));
+				redirect(site_url('Welcome/login'));
 			}
 		}
 		else
 		{
-			redirect(site_url('welcome'));
+			redirect(site_url('Welcome'));
 		}
 	}
 }
